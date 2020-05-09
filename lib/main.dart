@@ -59,10 +59,54 @@ class MyApp extends StatelessWidget {
                         color: Colors.lightBlue,
                       ),
                       SizedBox(
-                        width: 5.0,
+                        width: 10.0,
                       ),
                       Text(
                         'watsonema@gmail.com',
+                        style:
+                            TextStyle(color: Colors.lightBlue, fontSize: 20.0),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  margin:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                  padding: EdgeInsets.all(5.0),
+                  color: Colors.white,
+                  child: Row(
+                    children: <Widget>[
+                      Icon(
+                        Icons.phone,
+                        color: Colors.lightBlue,
+                      ),
+                      SizedBox(
+                        width: 10.0,
+                      ),
+                      Text(
+                        '+977-9856124356',
+                        style:
+                            TextStyle(color: Colors.lightBlue, fontSize: 20.0),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  margin:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                  padding: EdgeInsets.all(5.0),
+                  color: Colors.white,
+                  child: Row(
+                    children: <Widget>[
+                      Icon(
+                        Icons.location_on,
+                        color: Colors.lightBlue,
+                      ),
+                      SizedBox(
+                        width: 10.0,
+                      ),
+                      Text(
+                        'Local street kathmandu, Nepal',
                         style:
                             TextStyle(color: Colors.lightBlue, fontSize: 20.0),
                       ),
