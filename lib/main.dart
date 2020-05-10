@@ -10,6 +10,22 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.lightBlue,
+        bottomNavigationBar: new BottomAppBar(
+          shape: CircularNotchedRectangle(),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              SizedBox(
+                height: 48,
+              )
+            ],
+          ),
+        ),
+        floatingActionButton: new FloatingActionButton(
+          child: Icon(Icons.add),
+          onPressed: () {},
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         body: SafeArea(
           child: Center(
             child: Column(
@@ -88,6 +104,13 @@ class MyApp extends StatelessWidget {
                         style:
                             TextStyle(color: Colors.lightBlue, fontSize: 20.0),
                       ),
+                      SizedBox(
+                        width: 120.0,
+                      ),
+                      Text(
+                        'Edit',
+                        style: TextStyle(color: Colors.redAccent),
+                      ),
                     ],
                   ),
                 ),
@@ -109,6 +132,13 @@ class MyApp extends StatelessWidget {
                         'Local street kathmandu, Nepal',
                         style:
                             TextStyle(color: Colors.lightBlue, fontSize: 20.0),
+                      ),
+                      SizedBox(
+                        width: 30.0,
+                      ),
+                      Text(
+                        'Edit',
+                        style: TextStyle(color: Colors.redAccent),
                       ),
                     ],
                   ),
