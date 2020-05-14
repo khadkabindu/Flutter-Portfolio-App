@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "803805379100",
+    "firebase_url": "https://make-my-portfolio.firebaseio.com",
+    "project_id": "make-my-portfolio",
+    "storage_bucket": "make-my-portfolio.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803805379100:android:50d00e3d0d3d0bd1073dd9",
+        "android_client_info": {
+          "package_name": "com.android.portfolio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "803805379100-7npdpaa1j0tg2rb8vipv844mk4lpmd45.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCruytYxI1wHkWNEiADyLFwiSrWrFrXD-0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "803805379100-7npdpaa1j0tg2rb8vipv844mk4lpmd45.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "803805379100-s66khk6rjrck66vmqf5p2pjh7ol60fh7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sewa.portfolio"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
