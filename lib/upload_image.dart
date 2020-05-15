@@ -1,7 +1,6 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'dart:io';
 
 class LandingScreen extends StatefulWidget {
   @override
@@ -10,18 +9,20 @@ class LandingScreen extends StatefulWidget {
 
 class _LandingScreenState extends State<LandingScreen> {
   File imageFile;
-  _openGallery() async {
+  _openGallery(BuildContext context) async {
     var picture = await ImagePicker.pickImage(source: ImageSource.gallery);
     this.setState(() {
       imageFile = picture;
     });
+    Navigator.of(context).pop();
   }
 
-  _openCamera() async {
+  _openCamera(BuildContext context) async {
     var picture = await ImagePicker.pickImage(source: ImageSource.camera);
     this.setState(() {
       imageFile = picture;
     });
+    Navigator.of(context).pop();
   }
 
   Future<void> _ShowChoiceDialogue(BuildContext context) {
@@ -36,7 +37,7 @@ class _LandingScreenState extends State<LandingScreen> {
                   GestureDetector(
                     child: Text('Gallery'),
                     onTap: () {
-                      _openGallery();
+                      _openGallery(context);
                     },
                   ),
                   Padding(
@@ -45,7 +46,7 @@ class _LandingScreenState extends State<LandingScreen> {
                   GestureDetector(
                     child: Text('Camera'),
                     onTap: () {
-                      _openCamera();
+                      _openCamera(context);
                     },
                   ),
                 ],
@@ -53,6 +54,14 @@ class _LandingScreenState extends State<LandingScreen> {
             ),
           );
         });
+  }
+
+  Widget _decideImageView() {
+    if (imageFile == null) {
+      return Text('No image selected');
+    } else {
+      return Image.file(imageFile, width: 400, height: 400);
+    }
   }
 
   @override
@@ -63,13 +72,12 @@ class _LandingScreenState extends State<LandingScreen> {
         child: Center(
           child: Column(
             children: <Widget>[
-              Text('No image selected'),
+              _decideImageView(),
               RaisedButton(
-                onPressed: () {
-                  _ShowChoiceDialogue(context);
-                },
-                child: Text('Select image'),
-              ),
+                  onPressed: () {
+                    _ShowChoiceDialogue(context);
+                  },
+                  child: Text('Select image')),
             ],
           ),
         ),
